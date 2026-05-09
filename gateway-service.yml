@@ -11,3 +11,7 @@ spring:
           uri: http://localhost:8082
           predicates:
             - Path=/serviceB/**
+        - id: service-C
+          uri: http://localhost:8083
+          predicates:
+            - Path=/serviceC/**     
