@@ -2,16 +2,16 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: service-A
+        - id: service-a
           uri: lb://service-a
           predicates:
             - Path=/serviceA/**
 
-        - id: service-B
+        - id: service-b
           uri: lb://service-b
           predicates:
             - Path=/serviceB/**
-        - id: service-C
+        - id: service-c
           uri: lb://service-c
           predicates:
             - Path=/serviceC/**     
