@@ -1,17 +1,18 @@
 spring:
   cloud:
     gateway:
-      routes:
-        - id: service-a
-          uri: http://localhost:8081
-          predicates:
-            - Path=/serviceA/**
-
-        - id: service-b
-          uri: http://localhost:8082
-          predicates:
-            - Path=/serviceB/**
-        - id: service-c
-          uri: http://localhost:8083
-          predicates:
-            - Path=/serviceC/**     
+      server:
+        webflux:
+          routes:
+            - id: service-a
+              uri: http://localhost:8081
+              predicates:
+                - Path=/serviceA/**  
+            - id: service-b
+              uri: http://localhost:8082
+              predicates:
+                - Path=/serviceB/** 
+            - id: service-c
+              uri: http://localhost:8083
+              predicates:
+                - Path=/serviceC/**                 
