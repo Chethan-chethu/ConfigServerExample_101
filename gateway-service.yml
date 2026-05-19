@@ -7,12 +7,18 @@ spring:
             - id: service-a
               uri: http://localhost:8081
               predicates:
-                - Path=/serviceA/**  
+                - Path=/serviceA/**
+              filters:
+                - StripPrefix=1
             - id: service-b
               uri: http://localhost:8082
               predicates:
-                - Path=/serviceB/** 
+                - Path=/serviceB/**
+              filters:
+                - StripPrefix=1
             - id: service-c
               uri: http://localhost:8083
               predicates:
-                - Path=/serviceC/**                 
+                - Path=/serviceC/**
+              filters:
+                - StripPrefix=1
